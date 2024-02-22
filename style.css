@@ -194,7 +194,7 @@ header {
   }
 
   .menu-link:last-child {
-    background-color: #1b94bd;
+    background-color: var(--primary-color);
     padding: 0.5rem 1.5rem;
     border-radius: 1rem;
     color: var(--primary-font-color);
