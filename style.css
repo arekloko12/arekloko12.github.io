@@ -108,9 +108,25 @@ header {
   transition: all 0.3s ease-in-out;
 }
 
+.menu a {
+  text-decoration: none;
+  color: var(--secondary-font-color);
+}
+
 .menu.active {
   transform: translateX(0);
   transition: all 0.3s ease-in-out;
+}
+
+.menu.active a {
+  color: var(--primary-font-color);
+  text-decoration: none;
+  padding: 3rem 5.5rem;
+}
+
+.menu.active a:hover {
+  border-radius: 1.5rem;
+  background-color: var(--primary-color);
 }
 
 /* MAIN Section */
@@ -150,14 +166,14 @@ header {
 }
 
 .menu.active footer {
-    display:none
+  display: none;
 }
 
 /* Menu Style for desktop */
 
 @media only screen and (min-width: 750px) {
   .menu {
-    display: flex;
+    display: flex !important;
     position: unset;
     background: inherit;
     color: black;
@@ -259,7 +275,7 @@ footer p {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0.1rem 0.1rem 1rem var(--primary-color);
+  box-shadow: 0.1rem 0.5rem 1.5rem var(--primary-color);
   color: var(--primary-color);
   padding: 1.5rem 1rem;
   border-radius: 7rem;
