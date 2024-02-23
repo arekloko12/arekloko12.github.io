@@ -153,6 +153,7 @@ header {
 
 @media only screen and (min-width: 750px) {
   .menu {
+    display: none;
     position: unset;
     background: inherit;
     color: black;
@@ -202,6 +203,10 @@ header {
 
   .menu-link:last-child::after {
     display: none;
+  }
+
+  .menu.active footer {
+    display:none
   }
 }
 
