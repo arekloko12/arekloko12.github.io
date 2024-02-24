@@ -136,6 +136,11 @@ header {
 
 /* MAIN Section */
 
+main {
+  position: relative;
+  height: calc(100% - 25%);
+}
+
 .main-content {
   font-size: 1.5rem;
   text-align: center;
@@ -259,6 +264,7 @@ header {
     justify-content: center;
     width: 90%;
     margin: 3rem auto;
+    height: calc(100% - 45%);
   }
 
   .main-content {
@@ -316,9 +322,9 @@ footer p {
 }
 
 @media only screen and (min-width: 1600px) {
-  footer {
+  /* footer {
     position: relative;
-  }
+  } */
 }
 
 @media only screen and (max-width: 575px) {
