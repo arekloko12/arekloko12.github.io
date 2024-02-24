@@ -32,9 +32,14 @@ header {
   padding: 1rem 2rem;
 }
 
+.logo {
+  height: max-content;
+}
+
 .logo img {
   display: flex;
-  width: 55px;
+  padding: 0.4rem;
+  width: 9rem;
 }
 
 .burger {
@@ -191,6 +196,16 @@ header {
 
   .burger {
     display: none;
+  }
+
+  .logo {
+    height: max-content;
+  }
+
+  .logo img {
+    display: flex;
+    padding: 1rem;
+    width: 10rem;
   }
 
   .menu-link {
