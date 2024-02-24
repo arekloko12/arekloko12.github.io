@@ -111,6 +111,7 @@ header {
   list-style-type: none;
   transform: translateX(100%);
   transition: all 0.3s ease-in-out;
+  z-index: 10;
 }
 
 .menu a {
