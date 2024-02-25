@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;9000&display=swap");
 
 * {
   margin: 0;
@@ -169,49 +169,90 @@ li:focus ul.dropdown {
   background-color: var(--primary-color);
 }
 
+.menu.active footer {
+  display: none;
+}
+
 /* MAIN Section */
 
 main {
   position: relative;
   height: calc(100% - 25%);
+  padding: 3rem 1rem 0rem 1rem;
 }
 
-.main-content {
-  font-size: 1.5rem;
+main h1 {
+  font-family: var(--primary-font);
   text-align: center;
-  margin-top: 2rem;
-  color: var(--secondary-font-color);
-}
-
-.main-content span {
-  font-size: 1.5rem;
-}
-
-.main-image {
-  padding-top: 5rem;
-  width: 100%;
+  font-size: 35px;
+  font-weight: 900;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--primary-color);
+  width: 90%;
   margin: 0 auto;
-  display: block;
 }
 
-.main-icons {
+div.projects {
   display: flex;
-  background: var(--primary-color);
-  font-size: 1.5rem;
-  width: max-content;
-  margin: 1rem auto;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 2rem;
 }
 
-.main-icons a {
+div.project {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 50px;
+}
+
+div.project:first-child {
+  margin-top: 0;
+}
+
+div.project {
+  margin-top: 1rem;
+}
+
+.project a,
+.project span {
+  display: flex;
+  position: relative;
   text-decoration: none;
-  color: var(--secondary-color);
+  color: var(--secondary-font-color);
+  font-family: var(--primary-font);
 }
 
-.menu.active footer {
-  display: none;
+.project a {
+  padding: 0rem 1rem;
+}
+
+.project {
+  position: relative;
+  cursor: pointer;
+}
+
+.project::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -1px;
+  border-bottom: 2px solid var(--primary-color);
+  width: 0;
+  transition: width 0.3s ease-out;
+}
+
+.project:hover::after {
+  width: 100%;
+}
+
+.project-number,
+.project-size {
+  cursor: not-allowed;
 }
 
 /* Menu Style for desktop */
@@ -241,7 +282,7 @@ main {
     list-style-type: none;
     box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.25);
     border-radius: 0.5rem;
-    top: 32px;
+    top: 27px;
     left: 35%;
     text-align: center;
     transform: translateX(-41%);
@@ -325,38 +366,6 @@ main {
 
   .menu-link:last-child::after {
     display: none;
-  }
-}
-
-@media only screen and (min-width: 1000px) {
-  .main-image {
-    width: 80%;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    margin: 3rem auto;
-    height: calc(100% - 45%);
-  }
-
-  .main-content {
-    display: flex;
-    align-items: center;
-  }
-
-  .main-image {
-    padding: 0;
-    order: 2;
-  }
-
-  .main-content,
-  .main-icons a {
-    flex-direction: column;
   }
 }
 
