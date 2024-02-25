@@ -1,6 +1,6 @@
-burgerbtn = document.querySelector(".burger");
-menu = document.querySelector(".menu");
-footer = document.querySelector(".footer");
+let burgerbtn = document.querySelector(".burger");
+let menu = document.querySelector(".menu");
+let footer = document.querySelector(".footer");
 
 let click = false;
 
