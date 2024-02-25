@@ -143,8 +143,7 @@ a.projects-list {
   cursor: pointer;
 }
 
-li:active ul.dropdown,
-li:hover ul.dropdown {
+li:active ul.dropdown {
   display: block;
 }
 
@@ -315,6 +314,11 @@ div.project {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     border-radius: 0rem;
+  }
+
+  li:active ul.dropdown,
+  li:hover ul.dropdown {
+    display: block;
   }
 
   .burger {
