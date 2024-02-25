@@ -143,11 +143,6 @@ a.projects-list {
   cursor: pointer;
 }
 
-li:hover ul.dropdown,
-li:focus ul.dropdown {
-  display: block;
-}
-
 .menu a {
   text-decoration: none;
   color: var(--secondary-font-color);
