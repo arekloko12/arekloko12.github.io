@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;9000&display=swap");
 
 * {
   margin: 0;
@@ -15,18 +15,11 @@ body,
 
 :root {
   --primary-color: #407aff;
-  --primary-bg-color: rgba(255, 255, 255, 0.904);
+  --secondary-color: rgba(255, 255, 255, 0.904);
+  --third-color: #4a5296;
   --primary-font: "Poppins", sans-serif;
   --primary-font-color: rgba(255, 255, 255, 0.904);
   --secondary-font-color: #1c3163;
-  --secondary-color: rgba(255, 255, 255, 0.904);
-  --third-color: #4a5296;
-}
-
-/* body */
-
-body {
-  background-color: var(--primary-bg-color);
 }
 
 /* HEADER Section */
@@ -171,49 +164,67 @@ a.projects-list {
   background-color: var(--primary-color);
 }
 
+.menu.active footer {
+  display: none;
+}
+
 /* MAIN Section */
 
 main {
+  display: flex;
   position: relative;
   height: calc(100% - 25%);
+  padding: 3rem 1rem 0rem 1rem;
 }
 
-.main-content {
-  font-size: 1.5rem;
-  text-align: center;
-  margin-top: 2rem;
-  color: var(--secondary-font-color);
+main h1 span {
+  color: var(--primary-color);
+  font-family: var(--primary-font);
+  height: 2rem;
 }
 
-.main-content span {
-  font-size: 1.5rem;
+main h1,
+main span {
+  height: 2rem;
 }
 
-.main-image {
-  padding-top: 5rem;
-  width: 100%;
-  margin: 0 auto;
-  display: block;
-}
-
-.main-icons {
+main a {
   display: flex;
-  background: var(--primary-color);
-  font-size: 1.5rem;
-  width: max-content;
-  margin: 1rem auto;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  gap: 1rem;
-}
-
-.main-icons a {
+  position: relative;
   text-decoration: none;
-  color: var(--secondary-color);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 1rem;
+  width: 9rem;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  font-family: var(--primary-font);
 }
 
-.menu.active footer {
-  display: none;
+main a:hover {
+  background-color: var(--primary-color);
+  color: var(--primary-font-color);
+}
+
+.text {
+  display: flex;
+  font-family: var(--primary-font);
+  width: 100%;
+  height: 10rem;
+  font-size: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 50%;
+  flex-wrap: wrap;
 }
 
 /* Menu Style for desktop */
@@ -243,7 +254,7 @@ main {
     list-style-type: none;
     box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.25);
     border-radius: 0.5rem;
-    top: 32px;
+    top: 27px;
     left: 35%;
     text-align: center;
     transform: translateX(-41%);
@@ -328,37 +339,17 @@ main {
   .menu-link:last-child::after {
     display: none;
   }
-}
 
-@media only screen and (min-width: 1000px) {
-  .main-image {
-    width: 80%;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    margin: 3rem auto;
-    height: calc(100% - 45%);
+  .text-container {
+    display: block;
+    width: 50%;
+    height: 100%;
+    margin-left: 5rem;
+    padding-top: 10%;
   }
 
-  .main-content {
-    display: flex;
-    align-items: center;
-  }
-
-  .main-image {
-    padding: 0;
-    order: 2;
-  }
-
-  .main-content,
-  .main-icons a {
-    flex-direction: column;
+  .text {
+    justify-content: left;
   }
 }
 
