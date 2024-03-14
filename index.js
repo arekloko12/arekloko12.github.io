@@ -37,7 +37,7 @@ function check_list_mode() {
 
 let text = document.querySelector(".text");
 
-let countDate = new Date("Mar 16, 2024 12:00:00").getTime();
+let countDate = new Date("Mar 23, 2024 12:00:00").getTime();
 let x = setInterval(function () {
   let now = new Date().getTime();
   let distance = countDate - now;
